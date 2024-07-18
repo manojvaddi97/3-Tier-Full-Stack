@@ -1,5 +1,5 @@
 // this file is modificated ver from https://docs.mapbox.com/mapbox-gl-js/example/cluster/ 
-
+console.log("Mapbox Token in clusterMap.js: ", mapToken); // Debugging line
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
     container: 'cluster-map',
