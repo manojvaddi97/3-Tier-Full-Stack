@@ -30,7 +30,7 @@
     <% }%>
 </div>
 <script>
-    const mapToken = '<%= mapBoxToken %>';
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
     const campgrounds = { features: <%- JSON.stringify(campgrounds) %>} 
 
 </script>
