@@ -116,7 +116,7 @@
     </div>
 
     <script>
-        const mapToken = '<%= mapBoxToken %>';
+        const mapToken = '<%= mapBoxToken.replace(/\s+/g, '') %>';
         console.log("Mapbox Token from EJS: ", mapToken); // Debugging line
         const campground = <%- JSON.stringify(campground) %> // importance note: vscode formater add space at this line of code is not valid, "/</%/-"", not "/</%/ /-"
     </script>
