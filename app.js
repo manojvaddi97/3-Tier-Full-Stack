@@ -145,6 +145,11 @@ app.use('/', userRoutes);
 app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/reviews', reviewRoutes)
 
+app.get('/campgrounds/:id', (req, res) => {
+    const mapBoxToken = process.env.MAPBOX_TOKEN;
+    res.render('campgrounds/show', { mapBoxToken });
+});
+
 
 app.get('/', (req, res) => {
     res.render('home')
