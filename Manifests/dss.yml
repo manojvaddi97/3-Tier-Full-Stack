@@ -32,6 +32,7 @@ spec:
       containers:
         - name: yelp-camp-container
           image: manojvaddi497/camp-prod:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           env:
