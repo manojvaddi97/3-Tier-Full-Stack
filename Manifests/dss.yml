@@ -67,14 +67,16 @@ spec:
                   key: SECRET
           livenessProbe:
             httpGet:
-              path: /
+              path: /healthz
               port: 3000
             initialDelaySeconds: 30   # Adjust the initial delay here
+            periodSeconds: 10
           readinessProbe:
             httpGet:
-              path: /
+              path: /healthz
               port: 3000
             initialDelaySeconds: 30   # Adjust the initial delay here
+            periodSeconds: 10
 
 ---
 apiVersion: v1
