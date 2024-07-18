@@ -150,6 +150,10 @@ app.get('/', (req, res) => {
     res.render('home')
 });
 
+// Health check endpoint
+app.get('/healthz', (req, res) => {
+    res.status(200).send('OK');
+});
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))
